@@ -3,38 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StemsCare Services | NDIS Support Across North &amp; South Perth</title>
+<title>StemsCare Services | NDIS Support Across Perth’s Northern &amp; Southern Suburbs</title>
 <meta name="description" content="Compassionate, culturally responsive NDIS support across Perth. No waitlist, the same trusted carer every visit. Daily living, community participation, domestic assistance, personal care and transport.">
-<meta name="theme-color" content="#173f38">
-<link rel="icon" href="images/favicon.png">
+<meta name="theme-color" content="#0E3B2E">
+<link rel="icon" href="favicon.png">
 <meta property="og:title" content="StemsCare Services | NDIS Support in Perth">
 <meta property="og:description" content="Care that has room for you — now. No waitlist, the same trusted carer every visit.">
-<meta property="og:image" content="images/hero.jpg">
+<meta property="og:image" content="hero.jpg">
 <meta property="og:type" content="website">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="atkinson-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-<!-- Structured data: helps Google Business Profile / local search line up with the site -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "StemsCare Services",
   "legalName": "Cook & Breen Pty Ltd",
-  "description": "NDIS disability support provider across North and South Perth.",
-  "telephone": "+61497838395",
+  "description": "NDIS disability support provider across Perth’s northern and southern suburbs.",
+  "telephone": "+61475212770",
+  "contactPoint": [{"@type":"ContactPoint","telephone":"+61475212770","contactType":"customer service","areaServed":"Perth Northern Suburbs"},{"@type":"ContactPoint","telephone":"+61459676429","contactType":"customer service","areaServed":"Perth Southern Suburbs"}],
   "email": "admin@stemscare.com.au",
   "taxID": "14 695 350 415",
   "sameAs": ["https://www.facebook.com/share/1CN6raSeAh/?mibextid=wwXIfr"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "72 Selacosa Avenue",
-    "addressLocality": "Jindalee",
-    "addressRegion": "WA",
-    "addressCountry": "AU"
-  },
+  "address": {"@type":"PostalAddress","streetAddress":"72 Selacosa Avenue","addressLocality":"Jindalee","addressRegion":"WA","addressCountry":"AU"},
   "areaServed": "Perth, Western Australia",
   "openingHoursSpecification": [
     {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},
@@ -47,276 +40,272 @@
 <!-- META PIXEL: paste your existing Pixel base code here -->
 
 <style>
+/* Self-hosted fonts: faster, no Google tracking */
+@font-face{font-family:"Bricolage Grotesque";src:url(bricolage.woff2) format("woff2-variations");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(atkinson-400-normal.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(atkinson-700-normal.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Atkinson Hyperlegible";src:url(atkinson-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
 :root{
-  --ink:#14322c;
-  --teal-900:#163c35;
-  --teal-800:#1d4a42;
-  --teal:#2a7468;
-  --teal-500:#33887a;
-  --teal-50:#e9f2ef;
-  --plum:#7a2c42;
-  --plum-50:#f6ecef;
-  --gold:#c4954a;
-  --cream:#faf8f3;
-  --sand:#f3eee5;
-  --white:#ffffff;
-  --line:#e5ded1;
-  --muted:#55625e;
-  --radius:20px;
-  --radius-sm:12px;
-  --shadow-sm:0 1px 2px rgba(20,50,44,.06),0 2px 8px rgba(20,50,44,.05);
-  --shadow:0 2px 6px rgba(20,50,44,.06),0 18px 40px -12px rgba(20,50,44,.18);
-  --serif:"Fraunces",Georgia,serif;
-  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --wrap:1180px;
+  --euc:#0E3B2E;
+  --euc-2:#15503F;
+  --leaf:#2E9E48;
+  --leaf-ink:#1F7A36;
+  --ocean:#1766B0;
+  --ocean-2:#0F4F8C;
+  --sun:#F5892A;
+  --sun-2:#E2741A;
+  --mist:#EAF4EC;
+  --sky:#E8F1FA;
+  --white:#FFFFFF;
+  --ink:#0E3B2E;
+  --body:#33504A;
+  --line:#D5E4DA;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --text:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wrap:1200px;
+  --leaf-r:clamp(90px,14vw,190px) 22px clamp(90px,14vw,190px) 22px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+body{margin:0;background:var(--white);color:var(--body);font:400 18px/1.65 var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.015em;margin:0;color:var(--teal-900)}
 p{margin:0}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--teal-900);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+h1,h2,h3,h4{margin:0;text-wrap:balance;font-family:var(--display);color:var(--ink);font-weight:750;letter-spacing:-.015em;line-height:1.04;font-variation-settings:"wdth" 96}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--sun);color:var(--ink);padding:10px 16px;border-radius:8px;z-index:200;font-weight:700}
 .skip:focus{left:12px}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:8px}
 
-/* ---------- Buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;font:600 16px/1 var(--sans);text-decoration:none;padding:16px 26px;border-radius:999px;border:2px solid transparent;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease;cursor:pointer}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-primary{background:var(--teal);color:#fff;box-shadow:0 8px 20px -8px rgba(42,116,104,.7)}
-.btn-primary:hover{background:var(--teal-800);transform:translateY(-2px)}
-.btn-ghost{border-color:var(--teal);color:var(--teal-800);background:transparent}
-.btn-ghost:hover{background:var(--teal-50);transform:translateY(-2px)}
-.btn-plum{background:var(--plum);color:#fff;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
-.btn-plum:hover{background:#651f34;transform:translateY(-2px)}
-.btn-light{background:#fff;color:var(--teal-900)}
-.btn-light:hover{transform:translateY(-2px)}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;font:700 17.5px/1 var(--display);letter-spacing:.005em;text-decoration:none;padding:18px 28px;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.btn-sun:hover{background:#FFA24D}
+.btn-line{border-color:currentColor;color:var(--white);background:transparent}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn-ocean{background:var(--ocean);color:#fff}
+.btn-ocean:hover{background:var(--ocean-2)}
+.btn-euc{background:var(--euc);color:#fff}
+.btn-euc:hover{background:var(--euc-2)}
 
-/* ---------- Header ---------- */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.86);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
-.site-header.scrolled{border-color:var(--line);box-shadow:0 6px 24px -18px rgba(20,50,44,.4)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:100px}
-.brand{display:flex;align-items:center;text-decoration:none}
-.brand img{height:69px;width:auto}
-.brand-text{display:none;font-family:var(--serif);font-size:24px;font-weight:600;color:var(--teal-800)}
-.nav-links{display:flex;gap:24px;white-space:nowrap;list-style:none;margin:0;padding:0}
-.nav-links a{text-decoration:none;font-weight:500;font-size:15.5px;color:var(--muted);position:relative;padding:6px 0;transition:color .2s}
-.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .25s}
-.nav-links a:hover{color:var(--teal-900)}
-.nav-links a:hover::after{transform:scaleX(1)}
-.nav-cta{display:flex;align-items:center;gap:18px}
-.nav-phone{display:flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;color:var(--teal-900);white-space:nowrap}
-.nav-phone svg{width:18px;height:18px;color:var(--teal)}
-.nav-cta .btn{padding:13px 22px;font-size:15px}
-.menu-toggle{display:none;background:none;border:0;width:44px;height:44px;border-radius:10px;cursor:pointer;color:var(--teal-900)}
-.menu-toggle svg{width:26px;height:26px}
+/* Header */
+.site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+.site-header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:96px}
+.brand img{height:66px;width:auto}
+.nav-links{display:flex;gap:6px;list-style:none;margin:0;padding:0;white-space:nowrap}
+.nav-links a{display:block;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;color:var(--ink);transition:background .2s}
+.nav-links a:hover{background:var(--mist)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{display:flex;align-items:center;gap:8px;font-family:var(--display);font-size:18px;font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+.nav-phone svg{width:20px;height:20px;color:var(--leaf-ink)}
+.nav-cta .btn{padding:14px 22px;font-size:16px}
+.menu-toggle{display:none;place-items:center;width:46px;height:46px;border-radius:50%;border:0;background:var(--mist);color:var(--ink);cursor:pointer}
+.menu-toggle svg{width:24px;height:24px}
 .mobile-menu{display:none}
 
-/* ---------- Hero ---------- */
-.hero{position:relative;padding:72px 0 96px;overflow:hidden}
-.hero::before{content:"";position:absolute;width:720px;height:720px;right:-220px;top:-260px;background:radial-gradient(closest-side,rgba(51,136,122,.16),transparent);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--plum)}
-.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
-.hero h1{font-size:clamp(44px,6.2vw,78px);margin:22px 0 24px}
-.hero h1 em{font-style:italic;font-weight:500;color:var(--teal)}
-.lede{font-size:20px;color:var(--muted);max-width:33ch}
-.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:36px 0 34px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:22px;font-size:15px;color:var(--muted)}
-.hero-meta span{display:flex;align-items:center;gap:8px}
-.hero-meta svg{width:18px;height:18px;color:var(--teal)}
-.hero-visual{position:relative;margin:28px 0}
-.media{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,var(--teal-50),var(--sand));border:6px solid var(--teal);box-shadow:0 0 0 10px rgba(42,116,104,.10),0 28px 56px -18px rgba(20,50,44,.45),0 10px 22px -10px rgba(20,50,44,.25)}
-.media img{width:100%;height:100%;object-fit:cover}
-.hero-visual .media{aspect-ratio:5/4}
-.float{position:absolute;background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:14px 18px;display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px}
-.float-a{left:24px;bottom:-26px}
-.float-b{right:24px;top:-24px;gap:10px}
-.float-b i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center}
-.float-b i svg{width:14px;height:14px}
-.pulse{width:10px;height:10px;border-radius:50%;background:#2fb36b;box-shadow:0 0 0 0 rgba(47,179,107,.55);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(47,179,107,0)}100%{box-shadow:0 0 0 0 rgba(47,179,107,0)}}
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--euc);color:#DDEBE3;padding:88px 0 120px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px 8px 10px;border-radius:999px;font-weight:700;font-size:15px;color:#fff}
+.hero-kicker i{width:10px;height:10px;border-radius:50%;background:#58D16E;box-shadow:0 0 0 0 rgba(88,209,110,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(88,209,110,0)}100%{box-shadow:0 0 0 0 rgba(88,209,110,0)}}
+.hero h1{color:#fff;font-size:clamp(50px,6.4vw,96px);line-height:.92;margin:28px 0 30px;font-weight:800;font-variation-settings:"wdth" 96;letter-spacing:-.018em}
+.hero .lede{font-size:21px;line-height:1.6;max-width:30em;color:#CFE3D8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero-visual{position:relative}
+.leaf{border-radius:var(--leaf-r);overflow:hidden;background:var(--euc-2)}
+.leaf img{width:100%;height:100%;object-fit:cover}
+.hero-visual .leaf{aspect-ratio:4/4.4;position:relative;z-index:2;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.hero-visual .leaf img{object-position:38% center}
+.ribbon{position:absolute;pointer-events:none;z-index:1}
+.hero .ribbon{left:-30%;top:-16%;width:150%;height:auto}
+.hero-tag{position:absolute;z-index:3;left:-34px;bottom:46px;background:#fff;color:var(--ink);border-radius:999px;padding:12px 22px 12px 12px;display:flex;gap:12px;align-items:center;box-shadow:0 20px 40px -18px rgba(0,0,0,.5);font-family:var(--display);font-weight:700;font-size:17px;line-height:1.2;white-space:nowrap}
+.hero-tag i{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ocean);color:#fff;display:grid;place-items:center}
+.hero-tag i svg{width:20px;height:20px}
 
-/* ---------- Proof strip ---------- */
-.proof{background:var(--teal-900);color:#e7f1ee}
-.proof ul{list-style:none;margin:0;padding:26px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:var(--wrap);margin-inline:auto}
-.proof li{display:flex;align-items:center;gap:12px;font-weight:500;font-size:16px}
-.proof .tick{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;color:#9fd8c9}
-.proof .tick svg{width:16px;height:16px}
+/* Promise bar */
+.promise{background:var(--mist)}
+.promise ul{list-style:none;margin:0 auto;max-width:var(--wrap);padding:30px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.promise li{display:flex;gap:12px;align-items:flex-start;font-weight:700;color:var(--ink);font-size:17px;line-height:1.35}
+.promise svg{flex:none;width:26px;height:26px;color:var(--leaf)}
 
-/* ---------- Sections ---------- */
-section{scroll-margin-top:108px}
-.section{padding:112px 0}
-.section-sand{background:var(--sand)}
-.section-mint{background:var(--teal-50)}
-.head{max-width:680px;margin-bottom:56px}
-.head h2{font-size:clamp(34px,4.4vw,54px);margin:16px 0 18px}
-.head p{font-size:19px;color:var(--muted)}
-.head.center{text-align:center;margin-inline:auto}
-.head.center .eyebrow::after{content:"";width:26px;height:2px;background:var(--gold)}
-
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
-.icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--teal-50);color:var(--teal);margin-bottom:22px}
-.icon svg{width:24px;height:24px}
-.card h3{font-size:23px;margin-bottom:10px}
-.card p{color:var(--muted);font-size:16px}
-
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+/* Section rhythm */
+.sec{padding:120px 0}
+.sec-head{max-width:760px;margin-bottom:64px}
+.sec-head h2{font-size:clamp(40px,5.2vw,70px);font-variation-settings:"wdth" 96;letter-spacing:-.015em}
+.sec-head p{margin-top:22px;font-size:20px;max-width:34em}
+.kicker{display:block;font-weight:700;font-size:17px;color:var(--leaf-ink);margin-bottom:14px}
 
 /* Why */
-.why .card .num{font-family:var(--serif);font-size:15px;color:var(--gold);font-weight:600;letter-spacing:.08em;float:right}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.why-item{border-top:8px solid var(--c);padding-top:26px}
+.why-item svg{width:34px;height:34px;color:var(--c);margin-bottom:18px}
+.why-item h3{font-size:27px;margin-bottom:12px;font-variation-settings:"wdth" 95}
+.why-item p{font-size:17px}
 
 /* Services */
-.services .card{display:flex;gap:20px;align-items:flex-start}
-.services .icon{margin:0;flex:none;background:var(--teal);color:#fff}
-.card-cta{background:var(--plum-50);border-color:#ead6dc}
-.card-cta .icon{background:var(--plum)!important}
-.card-cta a{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:600;color:var(--plum);text-decoration:none}
-.card-cta a:hover{text-decoration:underline}
+.services{background:var(--sky)}
+.svc-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.svc{display:grid;grid-template-columns:72px 1fr 1.1fr;gap:28px;align-items:center;padding:30px 0;border-bottom:1px solid #BFD3E6}
+.svc-ico{width:72px;height:72px;border-radius:24px 8px 24px 8px;display:grid;place-items:center;background:var(--ocean);color:#fff}
+.svc-ico svg{width:32px;height:32px}
+.svc h3{font-size:clamp(26px,2.8vw,38px);font-variation-settings:"wdth" 95}
+.svc p{font-size:18px;max-width:30em}
+.svc-cta{margin-top:28px;background:var(--sun);border-radius:32px 10px 32px 10px;padding:36px 40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.svc-cta h3{font-size:clamp(28px,3vw,40px)}
+.svc-cta p{color:var(--ink);font-size:18px;margin-top:8px;max-width:34em}
 
 /* About */
-.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:72px;align-items:center}
-.about .media{aspect-ratio:5/4.4}
-.about h2{font-size:clamp(34px,4.2vw,50px);margin:16px 0 24px}
-.about p{color:var(--muted);font-size:18px;margin-bottom:18px}
-.quote{margin:30px 0 0;padding:6px 0 6px 24px;border-left:3px solid var(--gold);font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.5;color:var(--teal-800)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about .leaf{aspect-ratio:4/3.6;border-radius:22px clamp(90px,14vw,190px) 22px clamp(90px,14vw,190px)}
+.about h2{font-size:clamp(36px,4vw,54px);margin-bottom:28px;font-variation-settings:"wdth" 92}
+.about p{margin-bottom:18px}
+.pull{margin:36px 0 0;padding:0;font-family:var(--display);font-weight:600;font-size:clamp(24px,2.4vw,30px);line-height:1.25;color:var(--ocean);letter-spacing:-.01em;font-variation-settings:"wdth" 92}
+.pull::before{content:"";display:block;width:64px;height:8px;border-radius:8px;background:linear-gradient(90deg,var(--ocean),var(--sun));margin-bottom:22px}
 
 /* Steps */
-.steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.steps-grid h2{font-size:clamp(34px,4.2vw,50px);margin:16px 0 40px}
-.steps{list-style:none;margin:0 0 40px;padding:0;position:relative}
-.steps::before{content:"";position:absolute;left:25px;top:28px;bottom:28px;width:2px;background:repeating-linear-gradient(to bottom,var(--teal) 0 6px,transparent 6px 12px);opacity:.45}
-.steps li{position:relative;display:grid;grid-template-columns:52px 1fr;gap:22px;padding-bottom:30px}
-.steps li:last-child{padding-bottom:0}
-.step-n{width:52px;height:52px;border-radius:50%;background:var(--teal-800);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:600;box-shadow:0 0 0 6px var(--teal-50);z-index:1}
-.steps h3{font-size:23px;margin:10px 0 6px}
-.steps p{color:var(--muted)}
-.steps-grid .media{aspect-ratio:16/10}
+.steps{background:var(--ocean);color:#E4EEF9}
+.steps h2,.steps h3{color:#fff}
+.steps .kicker{color:#BFE0FF}
+.steps-top{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:end;margin-bottom:72px}
+.steps-top .sec-head{margin-bottom:0}
+.steps-top .sec-head p{color:#D3E5F8}
+.steps .leaf{aspect-ratio:16/10;border-radius:clamp(70px,10vw,140px) 22px clamp(70px,10vw,140px) 22px}
+.step-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+.step-list li{position:relative;padding-top:20px;border-top:2px solid rgba(255,255,255,.35)}
+.step-n{display:block;font-family:var(--display);font-weight:800;font-size:clamp(96px,10vw,150px);line-height:.8;color:var(--sun);font-variation-settings:"wdth" 85;margin-bottom:20px;letter-spacing:-.04em}
+.step-list h3{font-size:30px;margin-bottom:12px}
+.steps-cta{margin-top:64px}
 
 /* Founders */
-.founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.founder{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
-.founder .media{margin:22px 22px 0;border-radius:20px;box-shadow:0 0 0 8px rgba(42,116,104,.10),0 18px 36px -16px rgba(20,50,44,.4);aspect-ratio:1/1}
-.founder .media img{object-position:center 15%}
-.founder-body{padding:30px 32px 34px}
-.founder h3{font-size:28px}
-.role{display:block;margin:6px 0 16px;font-weight:600;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--plum)}
-.founder p{color:var(--muted);font-size:16.5px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.chips span{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--teal-50);color:var(--teal-800)}
+.founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.founder .arch{aspect-ratio:4/4.6;border-radius:999px 999px 28px 28px;overflow:hidden;background:var(--mist)}
+.founder:nth-child(2) .arch{background:var(--sky)}
+.founder .arch img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.founder h3{font-size:clamp(32px,3.4vw,44px);margin:32px 0 6px;font-variation-settings:"wdth" 92}
+.role{display:block;font-weight:700;font-size:17px;color:var(--ocean);margin-bottom:18px}
+.founder:nth-child(2) .role{color:var(--leaf-ink)}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.creds li{font-size:14.5px;font-weight:700;padding:7px 14px;border-radius:999px;background:var(--mist);color:var(--ink)}
 
 /* Values */
-.values .card{padding:26px 28px}
-.values .card h3{display:flex;align-items:center;gap:12px;font-size:21px}
-.values .card h3 svg{width:22px;height:22px;color:var(--teal);flex:none}
+.values{background:var(--mist)}
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 48px}
+.val h3{font-size:clamp(34px,3.6vw,48px);color:var(--c);font-variation-settings:"wdth" 92;margin-bottom:12px}
+.val p{font-size:17.5px;max-width:20em;color:var(--ink)}
 
 /* CTA band */
-.band{position:relative;overflow:hidden;color:#fff;text-align:center;padding:130px 0;background:var(--teal-900)}
-.band-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.band::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(22,60,53,.90) 0%,rgba(22,60,53,.72) 45%,rgba(122,44,66,.80) 100%)}
-.band .wrap{position:relative;z-index:1}
-.band h2{color:#fff;font-size:clamp(36px,5vw,62px);max-width:16ch;margin:0 auto 24px}
-.band h2 em{font-style:italic;font-weight:500;color:#f2d29b}
-.band p{max-width:52ch;margin:0 auto 38px;font-size:19px;color:rgba(255,255,255,.85)}
+.band{position:relative;overflow:hidden;background:var(--euc);color:#fff;padding:140px 0;text-align:center}
+.band-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.28}
+.band::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(14,59,46,.55),rgba(14,59,46,.92) 70%)}
+.band .ribbon{right:-12%;bottom:-18%;width:52%;opacity:.9;z-index:1}
+.band .wrap{position:relative;z-index:2}
+.band h2{color:#fff;font-size:clamp(42px,6vw,84px);max-width:13em;margin:0 auto 28px;font-variation-settings:"wdth" 92;line-height:.98}
+.band p{max-width:34em;margin:0 auto 44px;font-size:20px;color:#D7E8DF}
 .band-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
 
 /* Contact */
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
-.contact h2{font-size:clamp(36px,4.4vw,54px);margin:16px 0 18px}
-.contact .intro{color:var(--muted);font-size:18px;margin-bottom:36px;max-width:40ch}
-.contact-list{list-style:none;margin:0 0 32px;padding:0;display:grid;gap:18px}
-.contact-list li{display:flex;gap:16px;align-items:center}
-.contact-list .icon{margin:0;width:48px;height:48px;flex:none}
-.contact-list small{display:block;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
-.contact-list a,.contact-list span.v{font-weight:600;font-size:17px;text-decoration:none;color:var(--teal-900)}
-.contact-list a:hover{color:var(--teal)}
-.hours{border-top:1px solid var(--line);padding-top:22px}
-.hours div{display:flex;justify-content:space-between;padding:7px 0;color:var(--muted);font-size:16px}
-.hours div b{color:var(--ink);font-weight:600}
-.form-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:var(--shadow)}
-.form-card h3{font-size:26px;margin-bottom:6px}
-.form-card .sub{color:var(--muted);font-size:15.5px;margin-bottom:26px}
-.field{margin-bottom:18px}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{display:block;font-weight:600;font-size:14.5px;margin-bottom:7px}
-input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--cream);border:1.5px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;transition:border-color .2s,box-shadow .2s,background .2s}
-textarea{min-height:130px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px rgba(42,116,104,.14)}
-.form-card .btn{width:100%;justify-content:center;margin-top:6px}
-.fine{font-size:13.5px;color:var(--muted);margin-top:14px;text-align:center}
-.fine a{color:var(--teal);font-weight:600}
+.contact{background:var(--sky)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.contact h2{font-size:clamp(42px,5vw,68px);margin-bottom:20px;font-variation-settings:"wdth" 92}
+.contact .intro{font-size:20px;margin-bottom:40px;max-width:26em}
+.c-list{list-style:none;margin:0 0 36px;padding:0;display:grid;gap:22px}
+.c-list li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:center}
+.c-ico{width:52px;height:52px;border-radius:18px 6px 18px 6px;display:grid;place-items:center;background:var(--white);color:var(--ocean)}
+.c-ico svg{width:22px;height:22px}
+.c-list small{display:block;font-size:15px;color:var(--body)}
+.c-list a,.c-list .v{font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink);text-decoration:none}
+.c-list a:hover{text-decoration:underline;text-underline-offset:4px}
+.hours{background:var(--white);border-radius:24px;padding:22px 26px}
+.hours h3{font-size:22px;margin-bottom:10px}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:7px 0;border-bottom:1px solid var(--line);font-size:17px}
+.hours div:last-child{border-bottom:0}
+.hours b{color:var(--ink);font-family:var(--display);font-weight:700}
+.form-card{background:var(--white);border-radius:40px 12px 40px 12px;padding:48px;box-shadow:0 30px 60px -30px rgba(15,79,140,.35)}
+.form-card h3{font-size:34px;margin-bottom:8px}
+.form-card .sub{margin-bottom:30px}
+.field{margin-bottom:20px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:block;font-weight:700;font-size:16px;color:var(--ink);margin-bottom:8px}
+input,select,textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:#F6F9FC;border:2px solid #D3E0EC;border-radius:16px;padding:15px 18px;transition:border-color .2s,background .2s}
+textarea{min-height:140px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ocean);background:#fff}
+.form-card .btn{width:100%;margin-top:6px}
+.fine{font-size:15px;text-align:center;margin-top:16px}
+.fine a{color:var(--ocean);font-weight:700;font-family:var(--display)}
 .hp{position:absolute;left:-9999px}
 
 /* Footer */
-footer{background:var(--teal-900);color:rgba(255,255,255,.78);padding:80px 0 34px;font-size:15.5px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
-footer h4{font:600 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#9fd8c9;margin:0 0 20px}
-footer .fbrand{font-family:var(--serif);font-size:28px;color:#fff;margin-bottom:14px}
+footer{background:var(--euc);color:#C3D9CD;padding:88px 0 36px;font-size:16.5px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.14)}
+.fbrand{font-family:var(--display);font-weight:800;font-size:40px;color:#fff;line-height:1;margin-bottom:16px;font-variation-settings:"wdth" 92}
+footer h4{font-size:20px;color:#fff;margin-bottom:16px;font-weight:700}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-footer a{text-decoration:none;color:rgba(255,255,255,.82)}
-footer a:hover{color:#fff}
-.ack{margin-top:22px;font-size:14px;color:rgba(255,255,255,.6);max-width:46ch}
-.foot-base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;font-size:13.5px;color:rgba(255,255,255,.55)}
+footer a{text-decoration:none;color:#E2EEE7}
+footer a[href^="tel"],.foot-base{font-family:var(--display)}
+footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.ack{margin-top:24px;font-size:15px;color:#9FBFAF;max-width:34em}
+.foot-base{font-variant-numeric:normal;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:14.5px;color:#9FBFAF}
 
-/* Mobile call bar */
 .callbar{display:none}
 
-/* Reveal */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
-  .pulse{animation:none}
-  .btn,.card{transition:none}
+/* Load sequence: the one orchestrated moment */
+@media (prefers-reduced-motion:no-preference){
+  .hero h1,.hero .lede,.hero-actions,.hero-kicker{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero-kicker{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero .lede{animation-delay:.3s}.hero-actions{animation-delay:.42s}
+  .hero-visual .leaf{animation:grow 1s cubic-bezier(.2,.7,.2,1) .2s both}
+  .hero .ribbon path{stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 1.8s cubic-bezier(.5,0,.2,1) .35s forwards}
+  .hero-tag{animation:rise .7s cubic-bezier(.2,.7,.2,1) .9s both}
 }
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes grow{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-kicker i{animation:none}}
 
-/* ---------- Responsive ---------- */
-@media (max-width:1240px){
+/* Responsive */
+@media (max-width:1220px){
   .nav-links{display:none}
-  .menu-toggle{display:grid;place-items:center}
-  .mobile-menu{position:fixed;inset:100px 0 auto 0;background:var(--cream);border-bottom:1px solid var(--line);padding:12px 24px 28px;box-shadow:0 20px 30px -20px rgba(0,0,0,.25)}
+  .menu-toggle{display:grid}
+  .mobile-menu{position:fixed;inset:96px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);padding:10px 28px 26px;box-shadow:0 24px 40px -24px rgba(0,0,0,.3)}
   .mobile-menu.open{display:block}
-  .mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;font-size:18px;color:var(--teal-900)}
+  .mobile-menu a{display:block;padding:15px 0;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--display);font-weight:700;font-size:24px;color:var(--ink)}
 }
-@media (max-width:1080px){
-  .menu-toggle{display:grid;place-items:center}
-  .mobile-menu{position:fixed;inset:100px 0 auto 0;background:var(--cream);border-bottom:1px solid var(--line);padding:12px 24px 28px;box-shadow:0 20px 30px -20px rgba(0,0,0,.25)}
-  .mobile-menu.open{display:block}
-  .mobile-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;font-size:18px;color:var(--teal-900)}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
-  .proof ul{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:900px){
-  .hero{padding:40px 0 72px}
-  .hero-grid,.about-grid,.steps-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
-  .hero-visual{max-width:560px}
-  .float-a{left:16px}
-  .float-b{right:16px}
-  .grid-3{grid-template-columns:1fr 1fr}
-  .section{padding:84px 0}
-  .steps-grid .media{order:-1}
+@media (max-width:1000px){
+  .hero-grid,.about-grid,.steps-top,.contact-grid{grid-template-columns:1fr;gap:56px}
+  .hero-visual{max-width:540px}
+  .hero-tag{left:16px}
+  .why-grid{grid-template-columns:1fr 1fr;gap:48px 36px}
+  .promise ul{grid-template-columns:1fr 1fr}
+  .svc{grid-template-columns:64px 1fr;row-gap:10px}
+  .svc-ico{width:64px;height:64px}
+  .svc p{grid-column:2}
+  .step-list{grid-template-columns:1fr;gap:48px}
+  .val-grid{grid-template-columns:1fr 1fr}
+  .sec{padding:96px 0}
 }
 @media (max-width:640px){
-  body{font-size:16px;padding-bottom:72px}
-  .nav{height:84px}
-  .brand img{height:57px}
+  body{font-size:17px;padding-bottom:76px}
+  .wrap{padding:0 20px}
+  .nav{height:80px}
+  .brand img{height:52px}
   .nav-phone span,.nav-cta .btn{display:none}
-  .mobile-menu{inset:84px 0 auto 0}
-  .lede{font-size:18px}
-  .hero-actions .btn{flex:1 1 100%;justify-content:center}
-  .grid-4,.grid-3,.founders-grid,.field-row,.proof ul{grid-template-columns:1fr}
-  .foot-grid{grid-template-columns:1fr;gap:36px}
-  .form-card{padding:28px 22px}
-  .float-b{display:none}
-  .card{padding:24px}
-  .band{padding:88px 0}
-  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,243,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
-  .callbar .btn{flex:1;justify-content:center;padding:14px 10px;font-size:15px}
+  .mobile-menu{inset:80px 0 auto 0}
+  .hero{padding:56px 0 88px}
+  .hero .lede{font-size:19px}
+  .hero-actions .btn{flex:1 1 100%}
+  .promise ul,.why-grid,.val-grid,.founders-grid,.field-row{grid-template-columns:1fr}
+  .founders-grid{gap:72px}
+  .svc-cta{grid-template-columns:1fr;padding:30px 26px}
+  .form-card{padding:32px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:40px}
+  .band{padding:100px 0}
+  .hero-tag{left:12px;right:12px;bottom:18px;white-space:normal;font-size:15px;padding:10px 16px 10px 10px}
+  .hero-tag i{width:34px;height:34px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .callbar .btn{flex:1;padding:15px 10px;font-size:16px}
+  .callbar .btn-line{color:var(--ink)}
 }
 
 /* WhatsApp + Facebook */
@@ -332,43 +321,62 @@ footer a:hover{color:#fff}
 .callbar .btn-wa{background:#25D366;color:#0B3D1E;border-color:#25D366}
 .callbar .btn-wa svg{width:20px;height:20px}
 @media (max-width:860px){.wa-float{display:none}.callbar{gap:8px}.callbar .btn{flex:1 1 0;min-width:0;padding:13px 6px;font-size:14.5px;gap:6px;white-space:nowrap}.callbar .btn svg{width:18px;height:18px;flex:none}}
+
+/* Two-region phone contacts */
+.btn-call2{text-align:left}
+.btn-call2 .two{display:flex;flex-direction:column;line-height:1.15}
+.btn-call2 .two small{font-size:12.5px;font-weight:600;opacity:.85;letter-spacing:.01em}
+.nav-phones{display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+.nav-phones a{display:flex;align-items:center;gap:6px;text-decoration:none;color:inherit;font-size:13.5px;font-weight:600;line-height:1.2}
+.nav-phones a b{font-weight:800}
+.nav-phones svg{width:14px;height:14px;flex:none}
+.phone-pair{display:flex;flex-direction:column;gap:2px}
+.brand{flex:none}.brand img{max-width:none}
+a[href^="tel:"]{white-space:nowrap}
+@media (max-width:1420px){.nav-phones{display:none}}
+
+/* Netlify "Powered by" badge sits bottom-right: keep our buttons clear of it */
+.wa-float{right:auto !important;left:22px !important}
+@media (max-width:860px){.callbar{padding-bottom:calc(58px + env(safe-area-inset-bottom)) !important}}
+@media (max-width:860px){body{padding-bottom:132px !important}}
+
+/* header phones: aligned columns */
+.nav-phones{display:grid !important;grid-template-columns:14px auto auto;column-gap:7px;row-gap:3px;align-items:center}
+.nav-phones a{display:contents !important}
+.nav-phones .np-r{font-weight:700}
+.nav-phones .np-n{opacity:.85}
+.nav-phones b{font-variant-numeric:tabular-nums;text-align:left}
+@media (max-width:1420px){.nav-phones{display:none !important}}
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- SVG icon sprite -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-leafcheck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-6.5"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
   <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
   <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"/></symbol>
   <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-5h4v5"/></symbol>
+  <symbol id="i-broom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-5h4v5"/></symbol>
   <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></symbol>
   <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-5H7l-2 5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M5 12h14"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="i-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
   <symbol id="i-fbb" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.88v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.42 1.3-1.95 1.34-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.78 1.93.85 2.07.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></symbol>
-  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></symbol>
-  <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1766B0"/><stop offset=".55" stop-color="#2BA0D8"/><stop offset="1" stop-color="#F5892A"/></linearGradient>
 </svg>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="wrap nav">
-    <a href="#top" class="brand" aria-label="StemsCare Services home">
-      <img src="images/logo.png" alt="StemsCare Services" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span class="brand-text">StemsCare Services</span>
-    </a>
+    <a href="#top" class="brand" aria-label="StemsCare Services home"><img src="logo.png" alt="StemsCare Services"></a>
     <nav aria-label="Main">
       <ul class="nav-links">
         <li><a href="#top">Home</a></li>
@@ -380,252 +388,207 @@ footer a:hover{color:#fff}
       </ul>
     </nav>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:+61497838395"><svg><use href="#i-phone"/></svg><span>0497 838 395</span></a>
-      <a class="btn btn-primary" href="#contact">Book a free chat</a>
+      <div class="nav-phones nav-phone"><a href="tel:+61475212770"><svg><use href="#i-phone"/></svg><span class="np-r">Northern suburbs</span><b>0475 212 770</b></a><a href="tel:+61459676429"><svg><use href="#i-phone"/></svg><span class="np-r">Southern suburbs</span><b>0459 676 429</b></a></div>
+      <a class="btn btn-sun" href="#contact">Book a free chat</a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><svg><use href="#i-menu"/></svg></button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#top">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#how">How it works</a>
-    <a href="#founders">Founders</a>
-    <a href="#contact">Contact</a>
+    <a href="#top">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#how">How it works</a><a href="#founders">Founders</a><a href="#contact">Contact</a>
   </div>
 </header>
 
 <main id="main">
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div class="reveal">
-      <span class="eyebrow">NDIS support · North &amp; South Perth</span>
-      <h1>Care that has room for you — <em>now.</em></h1>
+    <div>
+      <span class="hero-kicker"><i aria-hidden="true"></i>Taking new participants now across Perth’s northern &amp; southern suburbs</span>
+      <h1>Care that has room for&nbsp;you&nbsp;— now.</h1>
       <p class="lede">Compassionate, culturally responsive NDIS support across Perth. No waitlist. The same trusted carer, every visit.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="tel:+61497838395"><svg><use href="#i-phone"/></svg>Call 0497 838 395</a>
-        <a class="btn btn-ghost" href="#services">See our services <svg><use href="#i-arrow"/></svg></a>
-      </div>
-      <div class="hero-meta">
-        <span><svg><use href="#i-clock"/></svg>Reply within one business day</span>
-        <span><svg><use href="#i-heart"/></svg>No-obligation first chat</span>
+        <a class="btn btn-sun btn-call2" href="tel:+61475212770"><svg><use href="#i-phone"/></svg><span class="two"><small>Perth Northern Suburbs</small>0475 212 770</span></a>
+        <a class="btn btn-sun btn-call2" href="tel:+61459676429"><svg><use href="#i-phone"/></svg><span class="two"><small>Perth Southern Suburbs</small>0459 676 429</span></a>
+        <a class="btn btn-line" href="#services">See our services</a>
       </div>
     </div>
-    <div class="hero-visual reveal">
-      <div class="media">
-        <img src="images/hero.jpg" alt="A StemsCare support worker chatting warmly with a participant at home" onerror="this.style.opacity=0">
-      </div>
-      <div class="float float-a"><span class="pulse" aria-hidden="true"></span>Taking new participants now</div>
-      <div class="float float-b"><i aria-hidden="true"><svg><use href="#i-heart"/></svg></i>One carer, the same face every visit</div>
+    <div class="hero-visual">
+      <svg class="ribbon" viewBox="0 0 1000 1000" fill="none" aria-hidden="true">
+        <path d="M40 930 C 160 700, 60 520, 260 470 S 640 560, 760 300 S 860 80, 930 60" stroke="url(#rib)" stroke-width="54" stroke-linecap="round"/>
+        <path d="M70 960 C 210 760, 110 600, 300 560 S 690 640, 830 370 S 910 140, 960 120" stroke="#2E9E48" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+      </svg>
+      <div class="leaf"><img src="hero.jpg" alt="A StemsCare support worker chatting warmly with a participant at home"></div>
+      <div class="hero-tag"><i aria-hidden="true"><svg><use href="#i-heart"/></svg></i>One carer, the same face every visit</div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROOF STRIP ================= -->
-<div class="proof" role="region" aria-label="Why StemsCare">
+<div class="promise" role="region" aria-label="Our promises">
   <ul>
-    <li><span class="tick"><svg><use href="#i-check"/></svg></span>No waitlist — capacity today</li>
-    <li><span class="tick"><svg><use href="#i-check"/></svg></span>The same carer, every visit</li>
-    <li><span class="tick"><svg><use href="#i-check"/></svg></span>Working to NDIS Practice Standards</li>
-    <li><span class="tick"><svg><use href="#i-check"/></svg></span>Culturally responsive care</li>
+    <li><svg><use href="#i-leafcheck"/></svg>No waitlist — capacity today</li>
+    <li><svg><use href="#i-leafcheck"/></svg>The same carer, every visit</li>
+    <li><svg><use href="#i-leafcheck"/></svg>Working to the NDIS Practice Standards</li>
+    <li><svg><use href="#i-leafcheck"/></svg>Culturally responsive care</li>
   </ul>
 </div>
 
-<!-- ================= WHY ================= -->
-<section class="section why" id="why">
+<!-- WHY -->
+<section class="sec" id="why">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Why families choose us</span>
+    <div class="sec-head">
+      <span class="kicker">Why families choose us</span>
       <h2>Support that turns up, and stays.</h2>
       <p>Starting with the NDIS is hard enough. We make the next part simple — dependable people who know you, ready when you are.</p>
     </div>
-    <div class="grid-4">
-      <article class="card reveal">
-        <span class="num">01</span>
-        <div class="icon"><svg><use href="#i-clock"/></svg></div>
-        <h3>A place for you now</h3>
-        <p>We have capacity today — no long waitlist, no being passed around. Your support can start soon.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num">02</span>
-        <div class="icon"><svg><use href="#i-heart"/></svg></div>
-        <h3>Lived experience</h3>
-        <p>Both our founders personally care for family with disability. We understand your road because we walk it too.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num">03</span>
-        <div class="icon"><svg><use href="#i-shield"/></svg></div>
-        <!-- Once NDIS Commission registration is issued, change to "Registered &amp; accountable" and add your registration number. -->
-        <h3>Audited &amp; accountable</h3>
-        <p>We work to the NDIS Practice Standards, with the governance and systems to keep care safe and consistent.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num">04</span>
-        <div class="icon"><svg><use href="#i-globe"/></svg></div>
-        <h3>Every culture welcome</h3>
-        <p>Inclusive support that respects your language, faith and values — for people of every background.</p>
-      </article>
+    <div class="why-grid">
+      <div class="why-item" style="--c:var(--leaf)"><svg><use href="#i-clock"/></svg><h3>A place for you now</h3><p>We have capacity today — no long waitlist, no being passed around. Your support can start soon.</p></div>
+      <div class="why-item" style="--c:var(--ocean)"><svg><use href="#i-heart"/></svg><h3>Lived experience</h3><p>Both our founders personally care for family with disability. We understand your road because we walk it too.</p></div>
+      <!-- Once NDIS Commission registration is issued, change to "Registered &amp; accountable" and add your registration number. -->
+      <div class="why-item" style="--c:var(--sun)"><svg><use href="#i-shield"/></svg><h3>Audited &amp; accountable</h3><p>We work to the NDIS Practice Standards, with the governance and systems to keep care safe and consistent.</p></div>
+      <div class="why-item" style="--c:var(--euc)"><svg><use href="#i-globe"/></svg><h3>Every culture welcome</h3><p>Inclusive support that respects your language, faith and values — for people of every background.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section class="section section-sand services" id="services">
+<!-- SERVICES -->
+<section class="sec services" id="services">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Our services</span>
+    <div class="sec-head">
+      <span class="kicker" style="color:var(--ocean)">Our services</span>
       <h2>Core NDIS supports, delivered with care.</h2>
       <p>Everyday, practical help that keeps you safe, independent and connected — in your home and out in your community.</p>
     </div>
-    <div class="grid-3">
-      <article class="card reveal">
-        <div class="icon"><svg><use href="#i-home"/></svg></div>
-        <div><h3>Assistance with daily life</h3><p>Personal routines, hygiene, meal prep and the day-to-day support that keeps you living independently at home.</p></div>
-      </article>
-      <article class="card reveal">
-        <div class="icon"><svg><use href="#i-users"/></svg></div>
-        <div><h3>Community participation</h3><p>Getting out, staying active and building confidence — social activities, hobbies, appointments and connection.</p></div>
-      </article>
-      <article class="card reveal">
-        <div class="icon"><svg><use href="#i-spark"/></svg></div>
-        <div><h3>Domestic assistance</h3><p>Cleaning, laundry and general upkeep, so your home stays safe, comfortable and easy to manage.</p></div>
-      </article>
-      <article class="card reveal">
-        <div class="icon"><svg><use href="#i-user"/></svg></div>
-        <div><h3>Personal care</h3><p>Respectful, dignified help with bathing, dressing, grooming and mobility — always at your pace.</p></div>
-      </article>
-      <article class="card reveal">
-        <div class="icon"><svg><use href="#i-car"/></svg></div>
-        <div><h3>Transport &amp; access</h3><p>Safe, reliable travel to appointments, activities and errands — so nothing gets in the way of your day.</p></div>
-      </article>
-      <article class="card card-cta reveal">
-        <div class="icon"><svg><use href="#i-plus"/></svg></div>
-        <div><h3>Not sure what you need?</h3><p>Tell us your goals and plan. We'll help you make sense of your options — no pressure, no jargon.</p><a href="#contact">Talk it through <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
-      </article>
+    <ul class="svc-list">
+      <li class="svc"><span class="svc-ico"><svg><use href="#i-home"/></svg></span><h3>Assistance with daily life</h3><p>Personal routines, hygiene, meal prep and the day-to-day support that keeps you living independently at home.</p></li>
+      <li class="svc"><span class="svc-ico"><svg><use href="#i-users"/></svg></span><h3>Community participation</h3><p>Getting out, staying active and building confidence — social activities, hobbies, appointments and connection.</p></li>
+      <li class="svc"><span class="svc-ico"><svg><use href="#i-broom"/></svg></span><h3>Domestic assistance</h3><p>Cleaning, laundry and general upkeep, so your home stays safe, comfortable and easy to manage.</p></li>
+      <li class="svc"><span class="svc-ico"><svg><use href="#i-user"/></svg></span><h3>Personal care</h3><p>Respectful, dignified help with bathing, dressing, grooming and mobility — always at your pace.</p></li>
+      <li class="svc"><span class="svc-ico"><svg><use href="#i-car"/></svg></span><h3>Transport &amp; access</h3><p>Safe, reliable travel to appointments, activities and errands — so nothing gets in the way of your day.</p></li>
+    </ul>
+    <div class="svc-cta">
+      <div><h3>Not sure what you need?</h3><p>Tell us your goals and plan. We'll help you make sense of your options — no pressure, no jargon.</p></div>
+      <a class="btn btn-euc" href="#contact">Talk it through</a>
     </div>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="section about" id="about">
+<!-- ABOUT -->
+<section class="sec about" id="about">
   <div class="wrap about-grid">
-    <div class="media reveal">
-      <img src="images/about.jpg" loading="lazy" alt="A StemsCare support worker holding hands with an older participant on the couch" onerror="this.style.opacity=0">
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">About StemsCare</span>
+    <div class="leaf"><img src="about.jpg" alt="A StemsCare support worker holding hands with an older participant on the couch" loading="lazy"></div>
+    <div>
+      <span class="kicker">About StemsCare</span>
       <h2>A Western Australian team that treats care as a partnership.</h2>
       <p>StemsCare Services is a Perth-based NDIS provider founded by two women with real, personal experience of caring for family members with disability. We know how overwhelming the system can feel — so we walk alongside you and your family, helping you understand your options and use your plan with confidence.</p>
       <p>Our support is built on warmth, respect and consistency: familiar faces, clear communication, and care shaped around your goals rather than ours.</p>
-      <blockquote class="quote">A values-driven team, guided by Christian principles of compassion and service — and welcoming to people of every faith, culture and background.</blockquote>
+      <blockquote class="pull">A values-driven team, guided by Christian principles of compassion and service — and welcoming to people of every faith, culture and background.</blockquote>
     </div>
   </div>
 </section>
 
-<!-- ================= HOW IT WORKS ================= -->
-<section class="section section-mint" id="how">
-  <div class="wrap steps-grid">
-    <div class="reveal">
-      <span class="eyebrow">Getting started</span>
-      <h2>Three simple steps.</h2>
-      <ol class="steps">
-        <li><span class="step-n">1</span><div><h3>Have a free chat</h3><p>Call or message us. We'll listen to your situation and answer your questions — no obligation.</p></div></li>
-        <li><span class="step-n">2</span><div><h3>We plan around you</h3><p>Together we shape support that fits your goals, your routine, your culture and your NDIS plan.</p></div></li>
-        <li><span class="step-n">3</span><div><h3>Your care begins</h3><p>We match you with a carer who suits you — and you'll see the same familiar face at every visit.</p></div></li>
-      </ol>
-      <a class="btn btn-primary" href="#contact">Start with a free chat <svg><use href="#i-arrow"/></svg></a>
-    </div>
-    <div class="media reveal">
-      <img src="images/steps.jpg" loading="lazy" alt="A StemsCare carer sharing information with a young participant and her mother over morning tea" onerror="this.style.opacity=0">
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOUNDERS ================= -->
-<section class="section" id="founders">
+<!-- STEPS -->
+<section class="sec steps" id="how">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">Our founders</span>
+    <div class="steps-top">
+      <div class="sec-head">
+        <span class="kicker">Getting started</span>
+        <h2>Three simple steps.</h2>
+        <p>From first call to first visit, without the runaround.</p>
+      </div>
+      <div class="leaf"><img src="steps.jpg" alt="A StemsCare carer sharing information with a young participant and her mother over morning tea" loading="lazy"></div>
+    </div>
+    <ol class="step-list">
+      <li><span class="step-n" aria-hidden="true">1</span><h3>Have a free chat</h3><p>Call or message us. We'll listen to your situation and answer your questions — no obligation.</p></li>
+      <li><span class="step-n" aria-hidden="true">2</span><h3>We plan around you</h3><p>Together we shape support that fits your goals, your routine, your culture and your NDIS plan.</p></li>
+      <li><span class="step-n" aria-hidden="true">3</span><h3>Your care begins</h3><p>We match you with a carer who suits you — and you'll see the same familiar face at every visit.</p></li>
+    </ol>
+    <div class="steps-cta"><a class="btn btn-sun" href="#contact">Start with a free chat</a></div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="sec" id="founders">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Our founders</span>
       <h2>Led by people who've lived it.</h2>
     </div>
     <div class="founders-grid">
-      <article class="founder reveal">
-        <div class="media"><img src="images/kgomotso.jpg" loading="lazy" alt="Kgomotso Kereng, co-founder of StemsCare Services" onerror="this.style.opacity=0"></div>
-        <div class="founder-body">
-          <h3>Kgomotso Kereng</h3>
-          <span class="role">Co-founder · Governance &amp; Finance</span>
-          <p>A Fellow of the Chartered Institute of Management Accountants and CPA Australia associate, with a Certificate III in Individual Support. Kgomotso brings deep expertise in governance, risk, compliance and leadership — and personal experience caring for family with disability.</p>
-          <div class="chips"><span>FCMA</span><span>CPA Australia</span><span>Cert III Individual Support</span></div>
-        </div>
+      <article class="founder">
+        <div class="arch"><img src="kgomotso.jpg" alt="Kgomotso Kereng, co-founder of StemsCare Services" loading="lazy"></div>
+        <h3>Kgomotso Kereng</h3>
+        <span class="role">Co-founder, Governance &amp; Finance</span>
+        <p>A Fellow of the Chartered Institute of Management Accountants and CPA Australia associate, with a Certificate III in Individual Support. Kgomotso brings deep expertise in governance, risk, compliance and leadership — and personal experience caring for family with disability.</p>
+        <ul class="creds"><li>FCMA</li><li>CPA Australia</li><li>Cert III Individual Support</li></ul>
       </article>
-      <article class="founder reveal">
-        <div class="media"><img src="images/mwangala.jpg" loading="lazy" alt="Mwangala Cook, co-founder of StemsCare Services" onerror="this.style.opacity=0"></div>
-        <div class="founder-body">
-          <h3>Mwangala Cook</h3>
-          <span class="role">Co-founder · People &amp; Care</span>
-          <p>Qualified in Human Resources with hands-on experience as an Activity Coordinator supporting people with disability and other vulnerable community members. Mwangala pairs professional care experience with a genuine heart for the families StemsCare serves.</p>
-          <div class="chips"><span>Human Resources</span><span>Activity Coordination</span><span>Disability support</span></div>
-        </div>
+      <article class="founder">
+        <div class="arch"><img src="mwangala.jpg" alt="Mwangala Cook, co-founder of StemsCare Services" loading="lazy"></div>
+        <h3>Mwangala Cook</h3>
+        <span class="role">Co-founder, People &amp; Care</span>
+        <p>Qualified in Human Resources and holding a Certificate IV in Community Services, with hands-on experience as an Activity Coordinator supporting people with disability and other vulnerable community members. Mwangala pairs professional care experience with a genuine heart for the families StemsCare serves.</p>
+        <ul class="creds"><li>Human Resources</li><li>Cert IV Community Services</li><li>Activity Coordination</li><li>Disability support</li></ul>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= VALUES ================= -->
-<section class="section section-sand values">
+<!-- VALUES -->
+<section class="sec values">
   <div class="wrap">
-    <div class="head reveal">
-      <span class="eyebrow">What we stand for</span>
+    <div class="sec-head">
+      <span class="kicker">What we stand for</span>
       <h2>The care we'd want for our own.</h2>
     </div>
-    <div class="grid-3">
-      <article class="card reveal"><h3><svg><use href="#i-heart"/></svg>Compassion</h3><p>Kindness, empathy and patience with every person, every time.</p></article>
-      <article class="card reveal"><h3><svg><use href="#i-shield"/></svg>Dignity &amp; respect</h3><p>We honour each person's story, culture and choices.</p></article>
-      <article class="card reveal"><h3><svg><use href="#i-target"/></svg>Person-centred</h3><p>Support built around your goals, with your decisions leading.</p></article>
-      <article class="card reveal"><h3><svg><use href="#i-repeat"/></svg>Consistency</h3><p>The same faces, the same reliable care — so support feels stable.</p></article>
-      <article class="card reveal"><h3><svg><use href="#i-users"/></svg>Belonging</h3><p>We help every person feel seen, heard and connected.</p></article>
-      <article class="card reveal"><h3><svg><use href="#i-check"/></svg>Trust &amp; integrity</h3><p>Honest, dependable relationships you can count on.</p></article>
+    <div class="val-grid">
+      <div class="val" style="--c:var(--leaf-ink)"><h3>Compassion</h3><p>Kindness, empathy and patience with every person, every time.</p></div>
+      <div class="val" style="--c:var(--ocean)"><h3>Dignity &amp; respect</h3><p>We honour each person's story, culture and choices.</p></div>
+      <div class="val" style="--c:var(--sun-2)"><h3>Person-centred</h3><p>Support built around your goals, with your decisions leading.</p></div>
+      <div class="val" style="--c:var(--ocean)"><h3>Consistency</h3><p>The same faces, the same reliable care — so support feels stable.</p></div>
+      <div class="val" style="--c:var(--sun-2)"><h3>Belonging</h3><p>We help every person feel seen, heard and connected.</p></div>
+      <div class="val" style="--c:var(--leaf-ink)"><h3>Trust &amp; integrity</h3><p>Honest, dependable relationships you can count on.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= CTA BAND ================= -->
+<!-- CTA BAND -->
 <section class="band">
-  <img class="band-bg" src="images/cta.jpg" alt="" loading="lazy" onerror="this.remove()">
-  <div class="wrap reveal">
-    <h2>Most providers say “join the waitlist.” <em>We say welcome.</em></h2>
+  <img class="band-bg" src="cta.jpg" alt="" loading="lazy">
+  <svg class="ribbon" viewBox="0 0 900 400" fill="none" aria-hidden="true"><path d="M20 360 C 220 80, 420 420, 620 180 S 860 40, 900 60" stroke="url(#rib)" stroke-width="40" stroke-linecap="round" opacity=".55"/></svg>
+  <div class="wrap">
+    <h2>Most providers say “join the waitlist.” We say welcome.</h2>
     <p>If you or someone you love needs support, you shouldn't have to wait months to be heard. Let's have a no-obligation chat this week.</p>
     <div class="band-actions">
-      <a class="btn btn-plum" href="tel:+61497838395"><svg><use href="#i-phone"/></svg>Call 0497 838 395</a>
-      <a class="btn btn-light" href="#contact">Send a message</a>
+      <a class="btn btn-sun btn-call2" href="tel:+61475212770"><svg><use href="#i-phone"/></svg><span class="two"><small>Perth Northern Suburbs</small>0475 212 770</span></a>
+        <a class="btn btn-sun btn-call2" href="tel:+61459676429"><svg><use href="#i-phone"/></svg><span class="two"><small>Perth Southern Suburbs</small>0459 676 429</span></a>
+      <a class="btn btn-line" href="#contact">Send a message</a>
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section class="section contact" id="contact">
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
   <div class="wrap contact-grid">
-    <div class="reveal">
-      <span class="eyebrow">Contact us</span>
+    <div>
+      <span class="kicker" style="color:var(--ocean)">Contact us</span>
       <h2>Let's start with a chat.</h2>
       <p class="intro">Call, email or send a message. We respond to every enquiry within one business day.</p>
-      <ul class="contact-list">
-        <li><span class="icon"><svg><use href="#i-phone"/></svg></span><div><small>Call us</small><a href="tel:+61497838395">0497 838 395</a></div></li>
-        <li><span class="icon"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><a href="mailto:admin@stemscare.com.au">admin@stemscare.com.au</a></div></li>
-        <li><span class="icon"><svg><use href="#i-pin"/></svg></span><div><small>Visit</small><span class="v">72 Selacosa Avenue, Jindalee WA</span></div></li>
-        <li><span class="icon brand-fb"><svg><use href="#i-fbb"/></svg></span><div><small>Facebook</small><a href="https://www.facebook.com/share/1CN6raSeAh/?mibextid=wwXIfr" target="_blank" rel="noopener">Follow StemsCare Services</a></div></li>
-        <li><span class="icon brand-wa"><svg><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><a href="https://wa.me/61497838395?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener">Message us on WhatsApp</a></div></li>
+      <ul class="c-list">
+        <li><span class="c-ico"><svg><use href="#i-phone"/></svg></span><div><small>Perth Northern Suburbs</small><a href="tel:+61475212770">0475 212 770</a></div></li>
+        <li><span class="c-ico"><svg><use href="#i-phone"/></svg></span><div><small>Perth Southern Suburbs</small><a href="tel:+61459676429">0459 676 429</a></div></li>
+        <li><span class="c-ico"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><a href="mailto:admin@stemscare.com.au">admin@stemscare.com.au</a></div></li>
+        <li><span class="c-ico"><svg><use href="#i-pin"/></svg></span><div><small>Visit</small><span class="v">72 Selacosa Avenue, Jindalee WA</span></div></li>
+        <li><span class="c-ico brand-fb"><svg><use href="#i-fbb"/></svg></span><div><small>Facebook</small><a href="https://www.facebook.com/share/1CN6raSeAh/?mibextid=wwXIfr" target="_blank" rel="noopener">Follow StemsCare Services</a></div></li>
+        <li><span class="c-ico brand-wa"><svg><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><a href="https://wa.me/61459676429?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener">Message us on WhatsApp</a></div></li>
       </ul>
       <div class="hours">
+        <h3>Opening hours</h3>
         <div><span>Monday – Friday</span><b>8:00am – 5:00pm</b></div>
         <div><span>Saturday</span><b>8:00am – 2:00pm</b></div>
         <div><span>Sunday</span><b>8:00am – 12:00pm</b></div>
       </div>
     </div>
-
-    <div class="form-card reveal">
+    <div class="form-card">
       <h3>Send us a message</h3>
       <p class="sub">Tell us a little about the support you're after. No obligation.</p>
       <!-- Netlify Forms: submissions appear under Site > Forms. Add an email notification to admin@stemscare.com.au. -->
@@ -636,18 +599,11 @@ footer a:hover{color:#fff}
           <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="First and last name" required></div>
           <div class="field"><label for="contact-how">Email or phone</label><input id="contact-how" name="contact" placeholder="How we can reach you" required></div>
         </div>
-        <div class="field">
-          <label for="for">Who is the support for?</label>
-          <select id="for" name="support_for">
-            <option>Myself</option>
-            <option>A family member</option>
-            <option>Someone I support professionally</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
+        <div class="field"><label for="for">Who is the support for?</label>
+          <select id="for" name="support_for"><option>Myself</option><option>A family member</option><option>Someone I support professionally</option><option>Not sure yet</option></select></div>
         <div class="field"><label for="msg">How can we help?</label><textarea id="msg" name="message" placeholder="Tell us a little about the support you're looking for"></textarea></div>
-        <button class="btn btn-primary" type="submit">Send enquiry <svg><use href="#i-arrow"/></svg></button>
-        <p class="fine">We respond within one business day. Prefer to talk? Call <a href="tel:+61497838395">0497 838 395</a>.</p>
+        <button class="btn btn-ocean" type="submit">Send enquiry</button>
+        <p class="fine">We respond within one business day. Prefer to talk? For Perth Northern Suburbs call <a href="tel:+61475212770">0475 212 770</a>; for Perth Southern Suburbs call <a href="tel:+61459676429">0459 676 429</a>.</p>
       </form>
     </div>
   </div>
@@ -655,71 +611,46 @@ footer a:hover{color:#fff}
 
 </main>
 
-<!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <div class="fbrand">StemsCare Services</div>
-        <p>Compassionate, culturally responsive NDIS support across the north and south Perth metro area.</p>
+        <p>Compassionate, culturally responsive NDIS support across Perth’s northern and southern suburbs.</p>
         <p class="ack">We acknowledge the Whadjuk Noongar people as the Traditional Custodians of the land on which we live and work, and pay our respects to Elders past and present.</p>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul>
-          <li><a href="#why">Why choose us</a></li>
-          <li><a href="#services">Our services</a></li>
-          <li><a href="#how">Getting started</a></li>
-          <li><a href="#founders">Our founders</a></li>
-        </ul>
+        <ul><li><a href="#why">Why choose us</a></li><li><a href="#services">Our services</a></li><li><a href="#how">Getting started</a></li><li><a href="#founders">Our founders</a></li></ul>
       </div>
       <div>
         <h4>Get in touch</h4>
-        <ul>
-          <li><a href="tel:+61497838395">0497 838 395</a></li>
-          <li><a href="mailto:admin@stemscare.com.au">admin@stemscare.com.au</a></li>
-          <li>72 Selacosa Avenue, Jindalee WA</li>
-          <li><a class="foot-social wa" href="https://wa.me/61497838395?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a></li><li><a class="foot-social fb" href="https://www.facebook.com/share/1CN6raSeAh/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg><use href="#i-fbb"/></svg>Facebook</a></li>
-        </ul>
+        <ul><li>Perth Northern Suburbs: <a href="tel:+61475212770">0475 212 770</a></li><li>Perth Southern Suburbs: <a href="tel:+61459676429">0459 676 429</a></li><li><a href="mailto:admin@stemscare.com.au">admin@stemscare.com.au</a></li><li>72 Selacosa Avenue, Jindalee WA</li><li><a class="foot-social wa" href="https://wa.me/61459676429?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a></li><li><a class="foot-social fb" href="https://www.facebook.com/share/1CN6raSeAh/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg><use href="#i-fbb"/></svg>Facebook</a></li></ul>
       </div>
     </div>
     <div class="foot-base">
-      <span>© <span id="yr">2026</span> StemsCare Services, a trading name of Cook &amp; Breen Pty Ltd · ABN 14 695 350 415. All rights reserved.</span>
+      <span>© <span id="yr">2026</span> StemsCare Services, a trading name of Cook &amp; Breen Pty Ltd, ABN 14 695 350 415. All rights reserved.</span>
       <span>Working to the NDIS Practice Standards</span>
     </div>
   </div>
 </footer>
 
-<!-- Mobile sticky call bar -->
-<a class="wa-float" href="https://wa.me/61497838395?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener" aria-label="Chat with StemsCare on WhatsApp"><svg><use href="#i-wa"/></svg>WhatsApp us</a>
+<a class="wa-float" href="https://wa.me/61459676429?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener" aria-label="Chat with StemsCare on WhatsApp"><svg><use href="#i-wa"/></svg>WhatsApp us</a>
 
 <div class="callbar">
-  <a class="btn btn-primary" href="tel:+61497838395"><svg><use href="#i-phone"/></svg>Call now</a>
-  <a class="btn btn-ghost" href="#contact">Message us</a>
-  <a class="btn btn-wa" href="https://wa.me/61497838395?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+  <a class="btn btn-sun" href="tel:+61475212770"><svg><use href="#i-phone"/></svg>Northern</a>
+  <a class="btn btn-sun" href="tel:+61459676429"><svg><use href="#i-phone"/></svg>Southern</a>
+  <a class="btn btn-wa" href="https://wa.me/61459676429?text=Hi%20StemsCare%2C%20I%E2%80%99d%20like%20to%20find%20out%20about%20NDIS%20support." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
 </div>
 
 <script>
-  // Header shadow on scroll
   const hdr=document.querySelector('.site-header');
   const onScroll=()=>hdr.classList.toggle('scrolled',window.scrollY>8);
   onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-
-  // Home / logo links: always scroll to the very top (the sticky header is never "out of view", so a plain #top anchor does nothing)
   document.querySelectorAll('a[href="#top"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'',location.pathname)}));
-
-  // Mobile menu
   const tgl=document.querySelector('.menu-toggle'),menu=document.getElementById('mobileMenu');
   tgl.addEventListener('click',()=>{const o=menu.classList.toggle('open');tgl.setAttribute('aria-expanded',o)});
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');tgl.setAttribute('aria-expanded','false')}));
-
-  // Scroll reveal
-  const els=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-    els.forEach(el=>io.observe(el));
-  } else els.forEach(el=>el.classList.add('in'));
-
   document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
 </body>
